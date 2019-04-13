@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<header class="main-header">
+  <div class="container">
+    <h1>{{title}}</h1>
+  </div>
+</header>
+
+<body>
+  <br><br>
+  {% for c in content %}
+  <b><a href="{{c.link}}" target="_blank">{{c.title}}</a></b><br />
+  <i>{{c.published}}</i><br />
+  <br>
+  {{c.summary|safe}}
+  <hr />
+  {% endfor %}
+</body>
+
+</html>
