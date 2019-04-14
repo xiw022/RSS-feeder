@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: feedcache
+Version: 1.4.1
+Summary: Wrapper for Mark Pilgrim's FeedParser module which caches feed content.
+Home-page: http://feedcache.readthedocs.org
+Author: Doug Hellmann
+Author-email: doug.hellmann@gmail.com
+License: UNKNOWN
+Description: 
+        A class to wrap Mark Pilgrim's FeedParser module so that parameters
+        can be used to cache the feed results locally instead of fetching the
+        feed every time it is requested. Uses both etag and modified times for
+        caching.  The cache is parameterized to use different backend storage
+        options.
+        
+Keywords: syndication,atom,RSS
+Platform: Any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires: feedparser

@@ -1,0 +1,4 @@
+Python 2.x 
+feedcache - [[http://www.doughellmann.com/projects/feedcache/]]
+feedparser.py - [[http://www.feedparser.org/]]
+shove, from L.C. Rees - [[http://pypi.python.org/pypi/shove]]

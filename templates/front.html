@@ -7,6 +7,9 @@
 </header>
 
 <body>
+  <form action="/get_posts/" method="post">
+    <button name="fet_p" type="submit">Get Feeds</button>
+</form>
   <br><br>
   {% for c in content %}
   <b><a href="{{c.link}}" target="_blank">{{c.title}}</a></b><br />
