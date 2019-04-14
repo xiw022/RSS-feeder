@@ -1,6 +1,6 @@
 # RSS-feeder
-A self learning project to display rss-feeds from https://9gag-rss.com/.\
-Currently deployed on http://xw534.pythonanywhere.com/.
+- A self learning project to display rss-feeds from https://9gag-rss.com/
+- Currently deployed on http://xw534.pythonanywhere.com/
 
 ### Prerequisites
 - Python Version: 3.7.3
