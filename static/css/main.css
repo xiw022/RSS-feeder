@@ -1,0 +1,45 @@
+.button {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+}
+.App {
+  text-align: center;
+}
+
+.col {
+    float: left;
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.App-logo {
+  padding-top: 7px;
+   height: 60px;
+   max-width: 300px;
+}
+
+.App-title {
+  font-family: "Dekko";
+  font-size: 40px;
+  color: #696969;
+}
+
+.App-header {
+  background-color: fff;
+    border-bottom: 2px solid #e9e9e9;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    align-items: flex-start
+}
+
+.App-link {
+  color: #61dafb;
+}

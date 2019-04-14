@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<header class="main-header">
-  <div class="container">
-    <h1>{{title}}</h1>
-  </div>
+<header>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <style>
+    .button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
 </header>
 
 <body>
-  <form action="/get_posts/" method="post">
-    <button name="fet_p" type="submit">Get Feeds</button>
-</form>
+
+  <div class="App">
+    <header class="App-header">
+      <div class="row">
+        <div class="col">
+          <h1 class="App-title">{{title}}</h1>
+        </div>
+        <div class="col">
+          <h1 class="App-title"></h1>
+        </div>
+        <div class="col">
+          <img src="/static/logo.png" className="App-logo" alt="logo" />
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div id="outer">
+    <div class="inner">
+      <form action="/get_awesome/" method="post">
+        <button class='button' name="fet_p" type="submit">Get 9GAG - Awesome</button>
+      </form>
+    </div>
+  </div>
   <br><br>
   {% for c in content %}
   <b><a href="{{c.link}}" target="_blank">{{c.title}}</a></b><br />
