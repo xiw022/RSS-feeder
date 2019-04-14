@@ -28,8 +28,7 @@ prev_time.replace(year=1)
 
 @app.route("/")
 def load_page():
-    #feeds = get_posts()
-    return render_template('front.html', title='9GAG - Awesome Feeder', content=feeds['entries'])
+    return render_template('index.html', title='9GAG - Awesome Feeder')
 
 @app.route("/get_posts/", methods=['POST'])
 def get_posts():
@@ -38,17 +37,16 @@ def get_posts():
     global cached_feeds
     global homeTZ
 
-    print(homeTZ)
-
     curr_time = datetime.now(homeTZ)
 
     if prev_time is not None and cached_feeds is not None and (curr_time - prev_time).total_seconds() < 120:
-        return cached_feeds
+        print("using cache")
+        return render_template('front.html', title='9GAG - Awesome Feeder', content=cached_feeds['entries'])
 
-    print("here")
     prev_time = datetime.now(homeTZ)
     cached_feeds = feedparser.parse(url)
-    return cached_feeds
+
+    return render_template('front.html', title='9GAG - Awesome Feeder', content=cached_feeds['entries'])
 
 
 if __name__ == '__main__':
